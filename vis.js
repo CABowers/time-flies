@@ -1,3 +1,4 @@
+// full heat map
 var margin = { top: 50, right: 0, bottom: 50, left: 30 },
     height = 600 - margin.top - margin.bottom,
     width = 430 * 1.5 - margin.left - margin.right,
@@ -77,9 +78,9 @@ d3.csv('data.csv',
     cards.enter().append("rect")
         .attr("x", function(d) { return (d.day - 1) * gridSize * 3.2; })
         .attr("y", function(d) { return (d.hour - 1) * gridSize})
-        // .attr("rx", 4)
-        // .attr("ry", 4)
-        // .attr("class", "hour bordered")
+        .attr("rx", 4)
+        .attr("ry", 4)
+        .attr("class", "hour bordered")
         .attr("width", gridSize * 3.2)
         .attr("height", gridSize)
         .on('mouseover', tooltip.show)
@@ -106,3 +107,4 @@ d3.csv('data.csv',
       .call(legend);
 });
 
+// timeline
