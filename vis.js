@@ -1,5 +1,5 @@
-var margin = { top: 50, right: 0, bottom: 100, left: 30 },
-    height = 960 - margin.top - margin.bottom,
+var margin = { top: 50, right: 0, bottom: 50, left: 30 },
+    height = 600 - margin.top - margin.bottom,
     width = 430 * 1.5 - margin.left - margin.right,
     gridSize = Math.floor(height / 24),
     legendElementWidth = gridSize*2,
@@ -25,7 +25,7 @@ var dayLabels = svg.selectAll(".dayLabel")
     .data(days)
     .enter().append("text")
       .text(function (d) { return d; })
-      .attr("x", function (d, i) { return i * gridSize * 2; })
+      .attr("x", function (d, i) { return i * gridSize * 2.5; })
       .attr("y", 0)
       .style("text-anchor", "end")
       .attr("transform", "translate(" + gridSize * 2 / 1.5 + ", -6)")
@@ -40,7 +40,7 @@ var timeLabels = svg.selectAll(".timeLabel")
     .enter().append("text")
       .text(function(d) { return d; })
       .attr("x", 0)
-      .attr("y", function (d, i) { return i * gridSize * 2 / 3; })
+      .attr("y", function (d, i) { return i * gridSize; })
       .style("text-anchor", "end")
       .attr("transform", "translate(-6, " + gridSize / 2 + ")")
       .attr("class", function(d, i) {
@@ -75,13 +75,13 @@ d3.csv('data.csv',
     svg.call(tooltip);
 
     cards.enter().append("rect")
-        .attr("x", function(d) { return (d.day - 1) * gridSize * 2; })
-        .attr("y", function(d) { return (d.hour - 1) * gridSize * 2 / 3; })
+        .attr("x", function(d) { return (d.day - 1) * gridSize * 2.5; })
+        .attr("y", function(d) { return (d.hour - 1) * gridSize})
         // .attr("rx", 4)
         // .attr("ry", 4)
         // .attr("class", "hour bordered")
-        .attr("width", gridSize * 2)
-        .attr("height", gridSize * 2 / 3)
+        .attr("width", gridSize * 2.5)
+        .attr("height", gridSize)
         .on('mouseover', tooltip.show)
         .on('mouseout', tooltip.hide)
         .style("fill", function(d) { return colorScale(d.value); });
