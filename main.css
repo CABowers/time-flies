@@ -38,14 +38,14 @@ body {
 }
 
 #timeline {
-	width: 54.75%;
+	width: 74.75%;
 	display: inline-block;
 	float:left;
 	margin-right: .25%;
 }
 
 #heatmap {
-	width: 44.75%;
+	width: 24.75%;
 	display: inline-block;
 	float:right;
 	margin-left: .25%;

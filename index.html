@@ -3,11 +3,13 @@
 <html>
 	<head>
 		<title>Time Flies! &#x2708;</title>
-		<link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="vis.css">
+
+		<link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./vis.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<!--<script src=https://code.jquery.com/jquery-3.2.1.min.js></script>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src ="main.js"></script>
 
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -35,7 +37,7 @@
 	        </ul>
 	      </div>
 	    </nav>
-	    
+
 		<div class="container" id="info-panel">
 	  		<h3>Enter airport or flight ID</h3>
 
@@ -48,22 +50,74 @@
 		    		<input type="text" class="form-control" id="confirmation" placeholder="ABCDEF">
 
 		    		<label for="location">Location</label>
-		    		<input type="text" class="form-control" id="location" placeholder="350 Ferst Drive, Atlanta GA">
+		    		<input type="text" class="form-control" id="location" placeholder="350 Ferst Drive, Atlanta, GA">
 		  		</div>
 		  		<button type="submit" class="btn btn-default">Submit</button>
 			</form>
 		</div>
 
 		<div class="container" id = "data-panel">
-			<h3>Here is your travel itenerary.</h3>
+			<h3>Here is your travel itinerary.</h3>
 			<div class = "container" style ="display: inline-block;">
 				<div id="timeline">
 					<h5>Timeline:</h5>
-					<div style="width: 400px; height: 600px; color:white; background-color: #8B2121"> Timeline placeholder</div>
-				</div>
+          <section id="cd-timeline" class="cd-container">
+            <div class="cd-timeline-block">
+              <div class="cd-timeline-img cd-home">
+                <i class="fa fa-home" aria-hidden="true"></i>
+              </div> <!-- cd-timeline-img -->
+
+              <div class="cd-timeline-content">
+                <h2>Title of section 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+                <a href="#0" class="cd-read-more">Read more</a>
+                <span class="cd-date">Jan 14</span>
+              </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+
+            <div class="cd-timeline-block">
+              <div class="cd-timeline-img cd-security">
+                <i class="fa fa-id-card" style="font-size:20px;" aria-hidden="true"></i>
+              </div> <!-- cd-timeline-img -->
+
+              <div class="cd-timeline-content">
+                <h2>Title of section 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <a href="#0" class="cd-read-more">Read more</a>
+                <span class="cd-date">Jan 18</span>
+              </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+
+            <div class="cd-timeline-block">
+              <div class="cd-timeline-img cd-walk">
+                <i class="fa fa-male" aria-hidden="true"></i>
+              </div> <!-- cd-timeline-img -->
+
+              <div class="cd-timeline-content">
+                <h2>Title of section 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis.</p>
+                <a href="#0" class="cd-read-more">Read more</a>
+                <span class="cd-date">Jan 24</span>
+              </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+
+            <div class="cd-timeline-block">
+              <div class="cd-timeline-img cd-plane">
+                <i class="fa fa-plane" aria-hidden="true"></i>
+              </div> <!-- cd-timeline-img -->
+
+              <div class="cd-timeline-content">
+                <h2>Title of section 4</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, inus veritatis qui ut.</p>
+                <a href="#0" class="cd-read-more">Read more</a>
+                <span class="cd-date">Feb 14</span>
+              </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+          </section> <!-- cd-timeline -->
+        </div>
 				<div id="heatmap">
 					<h5>Update your security arrival time:</h5>
-					<div style="width: 350px; height: 600px; color:white; background-color: #000548"> Wait times place holder</div>
+					<div style="width: 220px; height: 600px; color:white; background-color: #000548"> Wait times place holder</div>
 				</div>
 			</div>
 
