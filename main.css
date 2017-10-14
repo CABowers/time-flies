@@ -36,3 +36,17 @@ body {
 	background-color: #ADD8E6;
 	border-radius: 25px;
 }
+
+#timeline {
+	width: 54.75%;
+	display: inline-block;
+	float:left;
+	margin-right: .25%;
+}
+
+#heatmap {
+	width: 44.75%;
+	display: inline-block;
+	float:right;
+	margin-left: .25%;
+}
