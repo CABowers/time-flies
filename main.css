@@ -3,7 +3,7 @@
 	padding: 2px 2px 2px 2px;
 	margin: 2px 2px 2px 2px;
 	border-radius: 25px;
-
+	text-align: center;
 }
 
 .heat {
@@ -16,4 +16,8 @@
 
 .answer {
 	font-size: 16;
+}
+
+body {
+  padding-top: 5rem;
 }
