@@ -35,76 +35,35 @@
 	        </ul>
 	      </div>
 	    </nav>
+	    
+		<div class="container" id="info-panel">
+	  		<h3>Enter airport or flight ID</h3>
 
-		<div class="container">
-  		<h3>Enter airport or flight ID</h3>
-
-  		<form action="">
-  			<div>
-	  			<div class="form-group" style="display: inline-block; vertical-align: middle; min-width: 300px" >
-	  				<label for="airport">Airport</label>
-		    		<input list="airports" class="form-control" placeholder="Hartsfield Jackson Airport (ATL)">
-					<datalist id="airports">
-					  	<option value="Hartsfield Jackson Airport (ATL)">
-					  	<option value="JFK International Airport (JFK)">
-					  	<option value="Los Angeles Airport (LAX)">
-					  	<option value="Londan Heathrow Ariport (LHR)">
-					  	<option value="Seattle-Tacoma International Airport (SEA)">
-					</datalist>
-		  		</div>
-	  			<p style="display: inline-block; vertical-align: middle;"><b> - or - </b></p>
-		  		<div class="form-group" style="display: inline-block; vertical-align: middle; min-width: 300px">
+	  		<form action="">
+	  			<div class="form-group" style="vertical-align: middle; width: 80%; margin-left: 10%">
 		    		<label for="lastname">Last Name</label>
 		    		<input type="text" class="form-control" id="lastname" placeholder="Smith">
 		  		
 		    		<label for="confirmation">Confirmation</label>
 		    		<input type="text" class="form-control" id="confirmation" placeholder="ABCDEF">
+
+		    		<label for="location">Location</label>
+		    		<input type="text" class="form-control" id="location" placeholder="350 Ferst Drive, Atlanta GA">
 		  		</div>
-	  		</div>
-	  		<button type="submit" class="btn btn-default">Submit</button>
-		</form>
-			<!--
-  		<form action="">
-
-  			Airport:<br>
-
-  			<input list="airports" class="form-control">
-			<datalist id="airports">
-			  <option value="Hartsfield Jackson Airport (ATL)">
-			  <option value="JFK International Airport (JFK)">
-			  <option value="Los Angeles Airport (LAX)">
-			  <option value="Londan Heathrow Ariport (LHR)">
-			  <option value="Seattle-Tacoma International Airport (SEA)">
-			</datalist>
-
-  			<br>
-  			-or-<br>
-  			Confirmation Number and Last Name:<br>
-  			<input type="text" class="form-control"><br>
-  			<br>
-  			<input type="submit" value="Submit"  class="btn btn-default">
-		</form>
-	-->
+		  		<button type="submit" class="btn btn-default">Submit</button>
+			</form>
 		</div>
 
-		<div class = "container">
-			<h3>Select security arrival time</h3>
-			<h5>Heat Map of TSA wait times</h5>
-			<div id="chart"></div>
-		</div>
+		<div class="container" id = "data-panel">
+			<div class = "container">
+				<h3>Select security arrival time</h3>
+				<h5>Heat Map of TSA wait times</h5>
+				<div id="chart"></div>
+			</div>
 
-		<div class = "container">
-			<h3>Enter current location</h3>
-			<form action="">
-  			Location:<br>
-  			<input type="text" name="" value=""><br>
-  			<br>
-  			<input type="submit" value="Submit">
-		</form>
-		</div>
-
-		<div class="container">
-			<p class = "answer">Leave by X:XX to get to airport at Y:YY. Be at gate at Z:ZZ</p>
+			<div class="container">
+				<p class = "answer">Leave by X:XX to get to airport at Y:YY. Be at gate at Z:ZZ</p>
+			</div>
 		</div>
 
     <!-- visualization-related scripts -->
