@@ -84,10 +84,6 @@ d3.csv('data.csv',
         .attr("height", gridSize * 2 / 3)
         .on('mouseover', tooltip.show)
         .on('mouseout', tooltip.hide)
-        // .on("mouseover", function(){ console.log("HI"); return tooltip.style("visibility", "visible");})
-        // .on("mousemove", function(){return tooltip.style("top",
-        //     (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
-        // .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
         .style("fill", function(d) { return colorScale(d.value); });
 
     cards.transition().duration(1000)
@@ -108,25 +104,5 @@ d3.csv('data.csv',
 
     svg.select(".legend")
       .call(legend);
-    // var legend = svg.selectAll(".legend")
-    //     .data([0].concat(colorScale.quantiles()), function(d) { return d; });
-
-    // legend.enter().append("g")
-    //     .attr("class", "legend");
-
-    // legend.append("rect")
-    //   .attr("x", height)
-    //   .attr("y", function(d, i) { return legendElementWidth * i; })
-    //   .attr("width", legendElementWidth)
-    //   .attr("height", gridSize / 2)
-    //   .style("fill", function(d, i) { return colors[i]; });
-
-    // legend.append("text")
-    //   .attr("class", "mono")
-    //   .text(function(d) { return "≥ " + Math.round(d); })
-    //   .attr("x", function(d, i) { return legendElementWidth * i; })
-    //   .attr("y", height + gridSize);
-
-    // legend.exit().remove();
 });
 
