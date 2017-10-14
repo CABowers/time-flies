@@ -25,10 +25,10 @@ var dayLabels = svg.selectAll(".dayLabel")
     .data(days)
     .enter().append("text")
       .text(function (d) { return d; })
-      .attr("x", function (d, i) { return i * gridSize * 2.5; })
+      .attr("x", function (d, i) { return i * gridSize * 3.2; })
       .attr("y", 0)
-      .style("text-anchor", "end")
-      .attr("transform", "translate(" + gridSize * 2 / 1.5 + ", -6)")
+      .style("text-anchor", "middle")
+      .attr("transform", "translate(" + gridSize * 1.6 + ", -6)")
       .attr("class", function (d, i) {
                             return ((i > 0 && i <= 5) ?
                                 "dayLabel mono axis axis-workweek" :
@@ -42,7 +42,7 @@ var timeLabels = svg.selectAll(".timeLabel")
       .attr("x", 0)
       .attr("y", function (d, i) { return i * gridSize; })
       .style("text-anchor", "end")
-      .attr("transform", "translate(-6, " + gridSize / 2 + ")")
+      .attr("transform", "translate(-6, " + gridSize / 1.5 + ")")
       .attr("class", function(d, i) {
                             return ((i >= 8 && i <= 17) ?
                                 "timeLabel mono axis axis-worktime" :
@@ -75,12 +75,12 @@ d3.csv('data.csv',
     svg.call(tooltip);
 
     cards.enter().append("rect")
-        .attr("x", function(d) { return (d.day - 1) * gridSize * 2.5; })
+        .attr("x", function(d) { return (d.day - 1) * gridSize * 3.2; })
         .attr("y", function(d) { return (d.hour - 1) * gridSize})
         // .attr("rx", 4)
         // .attr("ry", 4)
         // .attr("class", "hour bordered")
-        .attr("width", gridSize * 2.5)
+        .attr("width", gridSize * 3.2)
         .attr("height", gridSize)
         .on('mouseover', tooltip.show)
         .on('mouseout', tooltip.hide)
