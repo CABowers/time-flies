@@ -10,3 +10,28 @@ var populateCodes = function() {
   		}); 
 	});
 }
+
+
+var getAirportInfo = function() {
+	//Gets airport info depending on what option is filled out
+}
+
+var populateData = function() {
+	// populates heat graph with data
+}
+
+var checkTSATime = function() {
+	//ensures TSA time has been selected before moving to next page
+}
+
+var getCurrentLocation = function() {
+	//gets user current location from form
+}
+
+var calculateTime = function() {
+	//calculates the departure time
+}
+
+var displayTimeline = function() {
+	//creates and shows the timeline
+}
