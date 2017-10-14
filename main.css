@@ -50,3 +50,12 @@ body {
 	float:right;
 	margin-left: .25%;
 }
+
+#message {
+	color: red;
+}
+
+.hide{
+	display:none;
+	visibility: hidden;
+}
