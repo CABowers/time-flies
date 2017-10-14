@@ -1,4 +1,8 @@
-//set the margins and labels of the graph. 
+// <<<<<<< HEAD
+// //set the margins and labels of the graph. 
+// =======
+// // full heat map
+// >>>>>>> 605f76f04a3cd459b9723c573815b33bcfccd46f
 var margin = { top: 50, right: 0, bottom: 50, left: 30 },
     height = 600 - margin.top - margin.bottom,
     width = 430 * 1.5 - margin.left - margin.right,
@@ -86,22 +90,30 @@ d3.csv('data.csv',
     svg.call(tooltip);
 
     cards.enter().append("rect")
-        .attr("x", function(d) { if (d.day - 1 == flight_day) {
-          return (d.day  - 1) * gridSize * 3.2;}
-          })
-        .attr("y", function(d) {
-          console.log(d.hour-1);
+// <<<<<<< HEAD
+        // .attr("x", function(d) { if (d.day - 1 == flight_day) {
+        //   return (d.day  - 1) * gridSize * 3.2;}
+        //   })
+        // .attr("y", function(d) {
+//           console.log(d.hour-1);
 
-          if (flight_hour < 0) {
-            return (d.hour - 1) * gridSize;
-          }
-          if (((d.hour - 1) >= (flight_hour - 5)) && ((d.hour - 1) < (flight_hour + 2))) {
-            return (d.hour - 1) * gridSize;
-          }
-          })
-        // .attr("rx", 4)
-        // .attr("ry", 4)
-        // .attr("class", "hour bordered")
+//           if (flight_hour < 0) {
+//             return (d.hour - 1) * gridSize;
+//           }
+//           if (((d.hour - 1) >= (flight_hour - 5)) && ((d.hour - 1) < (flight_hour + 2))) {
+//             return (d.hour - 1) * gridSize;
+//           }
+//           })
+//         // .attr("rx", 4)
+//         // .attr("ry", 4)
+//         // .attr("class", "hour bordered")
+// =======
+        .attr("x", function(d) { return (d.day - 1) * gridSize * 3.2; })
+        .attr("y", function(d) { return (d.hour - 1) * gridSize})
+        .attr("rx", 4)
+        .attr("ry", 4)
+        .attr("class", "hour bordered")
+// >>>>>>> 605f76f04a3cd459b9723c573815b33bcfccd46f
         .attr("width", gridSize * 3.2)
         .attr("height", gridSize)
         .on('mouseover', tooltip.show)
@@ -128,3 +140,24 @@ d3.csv('data.csv',
       .call(legend);
 });
 
+// timeline code
+jQuery(document).ready(function($){
+  var $timeline_block = $('.cd-timeline-block');
+
+  // hide timeline blocks which are outside the viewport
+  $timeline_block.each(function(){
+    if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
+      $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+    }
+  });
+
+  // on scolling, show/animate timeline blocks when enter the viewport
+  $(window).on('scroll', function(){
+    $timeline_block.each(function(){
+      if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75
+                  && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
+        $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+      }
+    });
+  });
+});

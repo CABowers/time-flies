@@ -25,7 +25,8 @@ body {
 	display: inline-block;
 	vertical-align: top;
 	position: fixed;
-	background-color: #959494; 
+	background-color: navy;
+	color: white;
 }
 
 #data-panel {
@@ -35,4 +36,27 @@ body {
 	float: right;
 	background-color: #ADD8E6;
 	border-radius: 25px;
+}
+
+#timeline {
+	width: 74.75%;
+	display: inline-block;
+	float:left;
+	margin-right: .25%;
+}
+
+#heatmap {
+	width: 24.75%;
+	display: inline-block;
+	float:right;
+	margin-left: .25%;
+}
+
+#message {
+	color: red;
+}
+
+.hide{
+	display:none;
+	visibility: hidden;
 }
