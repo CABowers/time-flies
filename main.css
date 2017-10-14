@@ -1,0 +1,19 @@
+.container{
+	background-color: #96AFF7;
+	padding: 2px 2px 2px 2px;
+	margin: 2px 2px 2px 2px;
+	border-radius: 25px;
+
+}
+
+.heat {
+	min-width: 150px;
+	min-height: 150px;
+	margin: 5px;
+	border-radius: 25px;
+	background-color: #4F7BF8;
+}
+
+.answer {
+	font-size: 16;
+}
