@@ -25,7 +25,8 @@ body {
 	display: inline-block;
 	vertical-align: top;
 	position: fixed;
-	background-color: #959494;
+	background-color: navy;
+	color: white;
 }
 
 #data-panel {
