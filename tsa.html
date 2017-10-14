@@ -3,8 +3,11 @@
 <html>
   <head>
     <meta charset="UTF-8">
+
     <title>Time Flies: TSA Times</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./vis.css">
+    <link rel="stylesheet" href="./main.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   </head>
   <body>
@@ -28,29 +31,31 @@
           </ul>
         </div>
     </nav>
+    <div class = "container">
     <h3>Enter airport or flight ID</h3>
       <form action="">
-        Airport:<br>
+          Airport:<br>
+          
+          <input list="airports">
+        <datalist id="airports">
+          <option value="Hartsfield Jackson Airport (ATL)">
+          <option value="JFK International Airport (JFK)">
+          <option value="Los Angeles Airport (LAX)">
+          <option value="Londan Heathrow Ariport (LHR)">
+          <option value="Seattle-Tacoma International Airport (SEA)">
+        </datalist>
         
-        <input list="airports">
-      <datalist id="airports">
-        <option value="Hartsfield Jackson Airport (ATL)">
-        <option value="JFK International Airport (JFK)">
-        <option value="Los Angeles Airport (LAX)">
-        <option value="Londan Heathrow Ariport (LHR)">
-        <option value="Seattle-Tacoma International Airport (SEA)">
-      </datalist>
-      
-        <br>
-        -or-<br>
-        Flight Number:<br>
-        <input type="text" name="lastname" value="DL4317"><br>
-        <br>
-        <input type="submit" value="Submit">
-    </form> 
+          <br>
+          -or-<br>
+          Flight Number:<br>
+          <input type="text" name="lastname" value="DL4317"><br>
+          <br>
+          <input type="submit" value="Submit">
+      </form> 
 
-    <div id="chart"></div>
-    <div id="dataset-picker"></div>
+      <div id="chart"></div>
+      <div id="dataset-picker"></div>
+    </div>
     <script src="https://d3js.org/d3.v3.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.13.0/d3-legend.js"></script>
