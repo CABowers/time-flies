@@ -32,19 +32,19 @@
     </nav>
     <div class = "container">
     <h3>Enter airport or flight ID</h3>
-      <form action="">
-          Airport:<br>
-
-          <input list="airports">
-        <datalist id="airports">
-          <option value="Hartsfield Jackson Airport (ATL)">
-          <option value="JFK International Airport (JFK)">
-          <option value="Los Angeles Airport (LAX)">
-          <option value="Londan Heathrow Ariport (LHR)">
-          <option value="Seattle-Tacoma International Airport (SEA)">
-        </datalist>
-          <br>
-          <input type="submit" value="Submit">
+      <form action="" style="width:50%; margin-left:25%;">
+          <div class="form-group">
+            <label for="airport">Airport</label>
+            <input list="airports" class="form-control" placeholder="Hartsfield Jackson Airport (ATL)">
+            <datalist id="airports">
+                <option value="Hartsfield Jackson Airport (ATL)">
+                <option value="JFK International Airport (JFK)">
+                <option value="Los Angeles Airport (LAX)">
+                <option value="London Heathrow Ariport (LHR)">
+                <option value="Seattle-Tacoma International Airport (SEA)">
+            </datalist>
+            <input type="submit" value="Submit" class="btn btn-default">
+          </div>        
       </form>
 
       <div id="chart"></div>
