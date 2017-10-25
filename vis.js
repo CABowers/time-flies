@@ -12,15 +12,13 @@ var margin = { top: 50, right: 0, bottom: 50, left: 30 },
 var flight_day = 5 ;//tuesday; 
 var flight_time = "12:00pm"; // note: starting with base case that requires no wraparound 
 // get the hour from the flight time and convert it to an int -- might want to do a check that it's a valid integer
-var flight_hour = 12;// Number(flight_time.substring(0,2)); 
-// console.log(flight_hour);
-
+var flight_hour = 12; // Number(flight_time.substring(0,2)); 
 
 // create the chart from d3 and add it to the general container 
 var svg = d3.select("#chart").append("svg")
     .attr("width", width + margin.left + margin.right) // set margins
     .attr("height", height + margin.top + margin.bottom) 
-    .append("g") //append the graph portion ?
+    .append("g") // append the graph portion ?
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")"); // keep the graph within the margins?
 
 // create a tooltip that when hovered over, shows the day of the week, the time, and the wait time in minutes 
@@ -87,7 +85,6 @@ d3.csv('data.csv',
     svg.call(tooltip);
 
     cards.enter().append("rect")
-// <<<<<<< HEAD
         // .attr("x", function(d) { if (d.day - 1 == flight_day) {
         //   return (d.day  - 1) * gridSize * 3.2;}
         //   })
